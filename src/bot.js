@@ -12,9 +12,8 @@ const kills = ["has drowned in money!", "got sniped!", "got poisoned!", "fell in
     "was caught lackin!", ""];
 
 //get random values
-function random_item(kill){
-    return kill[Math.floor(Math.random()*kill.length)];
-}
+function random_item(kill)/*=>*/{return kill[Math.floor(Math.random()*kill.length)];}
+
 //bot ready message
 client.on('ready', () =>{
     console.log(`${client.user.tag} has logged in`)
