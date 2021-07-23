@@ -9,7 +9,7 @@ const kills = ["has drowned in money!", "got sniped!", "got poisoned!", "fell in
     "was eaten by a shark!", "remembered an embarrassing moment from 2 years ago!", "fell down the stairs!",
     "spontaneously died!", "didnt do their math homework!", "got electrocuted!", "got an F on their test!", 
     "got stabbed!", "stubbed their toe!", "power went out while updating BIOS!", "got hit by an avalanche!", 
-    "was caught lackin!", ""];
+    "was caught lackin!", "got one tapped!", ];
 
 //get random values
 function random_item(kill)/*=>*/{return kill[Math.floor(Math.random()*kill.length)];}
