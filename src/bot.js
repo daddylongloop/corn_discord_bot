@@ -13,24 +13,17 @@ const kills = ["has drowned in money!", "got sniped!", "got poisoned!", "fell in
 
 //get random values
 function random_item(kill)/*=>*/{return kill[Math.floor(Math.random()*kill.length)];}
-
 //bot ready message
-client.on('ready', () =>{
-    console.log(`${client.user.tag} has logged in`)
-});
+client.on('ready',()=>{console.log(`${client.user.tag} has logged in`)});
+//check for if mesasage author is bot
+client.on('message',(message)=>{if(message.author.bot)return;})
 //bot message reactions
 client.on('message', (message) =>{
-    if (message.author.bot) return;
     //console.log(`${message.author.tag} wrote "${message.content}"` );
-    if (message.content === '!pls help'){
-        message.reply("use \"!pls kill\" in chat. you can @ other members to kill them or you can use \"!pls kill me\" to kill yourself.");
-    }
+    if (message.content==='!pls help'){message.reply("use \"!pls kill\" in chat. you can @ other members to kill them or you can use \"!pls kill me\" to kill yourself.");}
     let mention = message.mentions.users.first()
-    if (message.content.startsWith("!pls kill") && mention){
-        message.channel.send(`${mention} ${random_item(kills)}`)
-    } else if (message.content === '!pls kill me'){
-        message.reply(random_item(kills));
-    }
-});
+    if (message.content.startsWith("!pls kill")&&mention){message.channel.send(`${mention} ${random_item(kills)}`)}
+    if (message.content==='!pls kill me'){message.reply(random_item(kills));}});
+    
 //bot login
 client.login(process.env.token);
