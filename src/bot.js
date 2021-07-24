@@ -25,7 +25,7 @@ client.on('message', (message) =>{
     if(message.content==='!pls help'){message.reply("use \"!pls kill\" in chat. you can @ other members to kill them or you can use \"!pls kill me\" to kill yourself.");}
     let mention = message.mentions.users.first()
     if(message.content.startsWith("!pls kill")&&mention){message.channel.send(`${mention} ${random_item(kills)}`)}
-    if(message.content==='!pls kill me'){message.reply(random_item(kills));}});
+    if(message.content==='!pls kill me'){message.reply(random_item(kills))}})
     
 //bot login
 client.login(process.env.token);
