@@ -12,7 +12,7 @@ const kills = ["has drowned in money!", "got sniped!", "got poisoned!", "fell in
     "was caught lackin!", "got one tapped!", ];
 
 //get random values
-function random_item(kill)/*=>*/{return kill[Math.floor(Math.random()*kill.length)];}
+random_item=(kill)=>kill[Math.floor(Math.random()*kill.length)]
 //bot ready message
 client.on('ready',()=>{console.log(`${client.user.tag} has logged in`)});
 //check for if mesasage author is bot
