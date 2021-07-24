@@ -1,4 +1,6 @@
-//https://discord.com/api/oauth2/authorize?client_id=819374796261294110&permissions=0&scope=bot
+/*add bot to server:
+https://discord.com/api/oauth2/authorize?client_id=819374796261294110&permissions=0&scope=bot
+*/
 //prerequisites
 const { Client } = require('discord.js');
 require('dotenv').config()
