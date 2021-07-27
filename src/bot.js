@@ -19,8 +19,8 @@ random_item=(kill)=>kill[Math.floor(Math.random()*kill.length)]
 client.on('ready',()=>{
     console.log(`${client.user.tag} has logged in`);
     client.user.setActivity('!pls help', { type: 'LISTENING'})
-  .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
-  .catch(console.error);
+    .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
+    .catch(console.error);
 })
 //check for if mesasage author is bot
 client.on('message',(message)=>{if(message.author.bot)return;})
