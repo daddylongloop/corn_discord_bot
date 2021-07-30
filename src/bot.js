@@ -29,6 +29,6 @@ client.on('message', (message) =>{
     if(message.content.startsWith("!pls kill")&&mention){message.channel.send(`${mention} ${random_item(kills)}`)}
     if (message.content === '!pls kill me') { message.reply(random_item(kills))}
 })
-    
+
 //bot login
 client.login(process.env.token)
