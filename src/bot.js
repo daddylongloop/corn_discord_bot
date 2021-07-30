@@ -2,16 +2,16 @@
 https://discord.com/api/oauth2/authorize?client_id=819374796261294110&permissions=0&scope=bot
 */
 //prerequisites
-const { Client } = require('discord.js');
+const { Client } = require('discord.js')
 require('dotenv').config()
-const client = new Client();
+const client = new Client()
 //kill messages
 const kills = ["has drowned in money!", "got sniped!", "got poisoned!", "fell in the shower!", 
     "got cancer!", "got ran over by a car!", "fell out of a plane!",
     "was eaten by a shark!", "remembered an embarrassing moment from 2 years ago!", "fell down the stairs!",
     "spontaneously died!", "didnt do their math homework!", "got electrocuted!", "got an F on their test!", 
     "got stabbed!", "stubbed their toe!", "power went out while updating BIOS!", "got hit by an avalanche!", 
-    "was caught lackin!", "got one tapped!", "got checkmated!", "got a virus!", ];
+    "was caught lackin!", "got one tapped!", "got checkmated!", "got a virus!", "got forced to watch twilight!", ]
 
 //get random values
 random_item=(kill)=>kill[Math.floor(Math.random()*kill.length)]
@@ -31,4 +31,4 @@ client.on('message', (message) =>{
 })
     
 //bot login
-client.login(process.env.token);
+client.login(process.env.token)
