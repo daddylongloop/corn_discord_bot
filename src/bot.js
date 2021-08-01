@@ -14,7 +14,7 @@ const kills = ["has drowned in money!", "got sniped!", "got poisoned!", "fell in
     "was caught lackin!", "got one tapped!", "got checkmated!", "got a virus!", "got forced to watch twilight!", "lost ttheir phones!",]
 //get random values
 random_item=(kill)=>kill[Math.floor(Math.random()*kill.length)]
-//bot ready message
+//bot ready message and status
 client.on('ready',()=>{
     console.log(`${client.user.tag} has logged in`);
     client.user.setActivity('!pls help', { type: 'LISTENING'})
