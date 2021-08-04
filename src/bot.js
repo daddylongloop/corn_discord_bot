@@ -7,7 +7,7 @@ require('dotenv').config()
 const client = new Client()
 //kill messages
 const kills = ["has drowned in money!", "got sniped!", "got poisoned!", "fell in the shower!", 
-    "got cancer!", "got ran over by a car!", "fell out of a plane!","lost ttheir phones!",
+    "got cancer!", "got ran over by a car!", "fell out of a plane!","lost their phone!",
     "was eaten by a shark!", "remembered an embarrassing moment from 2 years ago!", "fell down the stairs!",
     "spontaneously died!", "didnt do their math homework!", "got electrocuted!", "got an F on their test!", 
     "got stabbed!", "stubbed their toe!", "power went out while updating BIOS!", "got hit by an avalanche!", 
@@ -29,7 +29,7 @@ client.on('message', (message) =>{
     }
     let mention = message.mentions.users.first()
     if(message.content.startsWith("!pls kill")&&mention){message.channel.send(`${mention} ${random_item(kills)}`)}
-    if (message.content === '!pls kill me') { message.reply(random_item(kills))}
+    if (message.content === '!pls kill me') { message.reply(random_item(kills)) }
 })
 
 //bot login
