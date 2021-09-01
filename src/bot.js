@@ -34,29 +34,6 @@ client.on('message', (message) =>{
     } 
     if(message.content.startsWith("!pls kill")&&mention){message.channel.send(`${mention} ${random_item(kills)}`)}
     if (message.content === '!pls kill me') { message.reply(random_item(kills))}
-<<<<<<< HEAD
-})
-client.on('message', (message) => {
-    if (message.content === '!pls join') {
-        if (!message.member.voice.channel) {
-            message.reply("you are not in a voice channel")
-            return
-        }
-        if (message.member.voice.channel) {
-            message.member.voice.channel.join()
-        }
-    }
-    if (message.content === '!pls leave') {
-        if (!message.member.voice.channel) {
-            message.reply("you are not in a voice channel")
-            return
-        }
-        if (message.member.voice.channel) {
-            message.member.voice.channel.leave()
-        }
-    }
-=======
->>>>>>> parent of 73e8bf4 (fixed spelling mistake)
 })
 //bot login
 //client.login(process.env.token)
