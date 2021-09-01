@@ -7,7 +7,7 @@ require('dotenv').config()
 const client = new Client()
 //kill messages
 const kills = ["has drowned in money!", "got sniped!", "got poisoned!", "fell in the shower!", 
-    "got cancer!", "got ran over by a car!", "fell out of a plane!","lost ttheir phones!",
+    "got cancer!", "got ran over by a car!", "fell out of a plane!","lost their phone!",
     "was eaten by a shark!", "remembered an embarrassing moment from 2 years ago!", "fell down the stairs!",
     "spontaneously died!", "didnt do their math homework!", "got electrocuted!", "got an F on their test!", 
     "got stabbed!", "stubbed their toe!", "power went out while updating BIOS!", "got hit by an avalanche!", 
@@ -33,8 +33,28 @@ client.on('message', (message) =>{
     message.reply(`use "!pls kill" in chat. you can @ other members to kill them or you can use "!pls kill me" to kill yourself. You can also use !pls join and!pls leave for voice chat commands(still need to implement)`);
     } 
     if(message.content.startsWith("!pls kill")&&mention){message.channel.send(`${mention} ${random_item(kills)}`)}
-    if (message.content === '!pls kill me') { message.reply(random_item(kills))}
+    if (message.content === '!pls kill me') { message.reply(random_item(kills)) }
+})
+client.on('message', (message) => {
+    if (message.content === '!pls join') {
+        if (!message.member.voice.channel) {
+            message.reply("you are not in a voice channel")
+            return
+        }
+        if (message.member.voice.channel) {
+            message.member.voice.channel.join()
+        }
+    }
+    if (message.content === '!pls leave') {
+        if (!message.member.voice.channel) {
+            message.reply("you are not in a voice channel")
+            return
+        }
+        if (message.member.voice.channel) {
+            message.member.voice.channel.leave()
+        }
+    }
 })
 //bot login
 //client.login(process.env.token)
-client.login("ODczMzM1MDY2OTEzMzA4Njgy.YQ26qQ.-ryiCEztOxbn19wqHwcKUxm_kxM")
+client.login("ODczMzM1MDY2OTEzMzA4Njgy.YQ26qQ.0FN3mr0mmGeZ_ipSNwphHKgXdTA")
