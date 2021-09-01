@@ -34,6 +34,7 @@ client.on('message', (message) =>{
     } 
     if(message.content.startsWith("!pls kill")&&mention){message.channel.send(`${mention} ${random_item(kills)}`)}
     if (message.content === '!pls kill me') { message.reply(random_item(kills))}
+<<<<<<< HEAD
 })
 client.on('message', (message) => {
     if (message.content === '!pls join') {
@@ -54,6 +55,8 @@ client.on('message', (message) => {
             message.member.voice.channel.leave()
         }
     }
+=======
+>>>>>>> parent of 73e8bf4 (fixed spelling mistake)
 })
 //bot login
 //client.login(process.env.token)
