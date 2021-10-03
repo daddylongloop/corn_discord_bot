@@ -12,7 +12,6 @@
   "homepage": "https://github.com/daddylongloop/corn_discord_bot",
   "dependencies": {
     "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0",
-    "ytdl-core": "^4.9.1"
+    "dotenv": "^10.0.0"
   }
 }

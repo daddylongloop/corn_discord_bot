@@ -6,4 +6,6 @@ const kills = ["has drowned in money!", "got sniped!", "got poisoned!", "fell in
     "got stabbed!", "stubbed their toe!", "power went out while updating BIOS!", "got hit by an avalanche!", 
     "was caught lackin!", "got one tapped!", "got checkmated!", "got a virus!", "got forced to watch twilight!",
     "got bit by a zombie!", "got bit by vampires!", "was the last one to finish a lap during pe!(fatty)"]
+
+
 module.exports = kills
