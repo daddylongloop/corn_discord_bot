@@ -13,7 +13,7 @@ const kills = require("./kills") // get the kill message array
 let helpMsg = `use "!pls kill" in chat. you can @ other members to kill them or you can use "!pls kill me" to kill yourself. \
  You can also use !pls join and!pls leave for voice chat commands(still need to implement)`
  
-//get random values
+//get random kill messsage
 random_item=(kill)=>kill[Math.floor(Math.random()*kill.length)]
 //bot ready message and status
 client.on('ready',()=>{
