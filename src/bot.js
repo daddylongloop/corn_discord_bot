@@ -1,13 +1,15 @@
 /*add bot to server:
 https://discord.com/api/oauth2/authorize?client_id=819374796261294110&permissions=0&scope=bot
 */
-//prerequisites
+//imports
+    // discord.js imports
 const { Client } = require('discord.js')
 require('dotenv').config()
 const client = new Client()
-const { prefix } = require("../config.json")
-const kills = require("./kills")
-//kill messages
+// */ discord imports
+const { prefix } = require("../config.json") // get the prefix
+const kills = require("./kills") // get the kill message array
+//help message
 let helpMsg = `use "!pls kill" in chat. you can @ other members to kill them or you can use "!pls kill me" to kill yourself. \
  You can also use !pls join and!pls leave for voice chat commands(still need to implement)`
  
