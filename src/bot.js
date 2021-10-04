@@ -2,11 +2,11 @@
 https://discord.com/api/oauth2/authorize?client_id=819374796261294110&permissions=0&scope=bot
 */
 //imports
-    // discord.js imports
+    // discord.js stuff
 const { Client } = require('discord.js')
-require('dotenv').config()
 const client = new Client()
 // */ discord imports
+require('dotenv').config()// get dotenv configuration
 const { prefix } = require("../config.json") // get the prefix
 const kills = require("./kills") // get the kill message array
 //help message
