@@ -28,12 +28,12 @@ client.on('message', (message) => {
 })
 //bot message reactions
 client.on('message', (message) => {
-    if (message.content === '!pls kill me') { message.reply(random_item(kills)) }
+    if (message.content === `${prefix} kill me`) { message.reply(random_item(kills)) }
     if (message.content === `${prefix} help`) { message.reply(helpMsg) }
     if (message.content === `${prefix} kill @everyone`) { message.channel.send(`@everyone ${random_item(kills)}`) }
     //menion handling
     let mention = message.mentions.users.array()
-    if (message.content.startsWith("!pls kill") && mention.length == 1) 
+    if (message.content.startsWith(`${prefix} kill`) && mention.length == 1) 
         { message.channel.send(`${mention} ${random_item(kills)}`) }
     else if (message.content.startsWith(`${prefix}`) && mention.length != 1 || 0) {
         mention.forEach(ment => {
